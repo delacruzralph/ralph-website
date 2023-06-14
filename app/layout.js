@@ -1,5 +1,6 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
+import './globals.css';
+import { Inter } from 'next/font/google';
+import Sidebar from './components/Sidebar';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -11,7 +12,62 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+
+        {/* Top Fixed Bar */}
+        <div style={{
+          position: 'fixed',
+          top: '0',
+          backgroundColor: 'white',
+          width: '100vw',
+          height: '2rem'
+        }}>
+        </div>
+
+        {/* LAYOUT for PAGE */}
+        <div style={{
+          paddingTop: '2rem',
+          paddingBottom: '2rem',
+          display: 'grid',
+          gridTemplateColumns: '1fr 3fr',
+          height: '100rem'
+          // height: '100vh'
+        }}>
+
+          {/* LAYOUT for Sidebar */}
+          <div style={{
+            position: 'fixed',
+            left: '2.5vw',
+            top: '2rem',
+            bottom: '2rem', 
+            backgroundColor: 'gray',
+            width: '22.5vw',
+            height: '100%'
+          }}>
+            <Sidebar />
+          </div>
+
+          {/* LAYOUT for Main Content */}
+          <div style={{
+            marginLeft: '25vw',
+            backgroundColor: 'lightgray',
+            height: '100%',
+            width: '72.5vw',
+            borderLeft: '1rem black solid'
+          }}>
+            {children}
+          </div>
+        </div>
+
+        {/* Bottom Fixed Bar */}
+        <div style={{
+          position: 'fixed',
+          bottom: '0',
+          backgroundColor: 'white',
+          width: '100vw',
+          height: '2rem'
+        }}></div>
+      </body>
     </html>
   )
 }
