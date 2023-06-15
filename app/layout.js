@@ -16,33 +16,29 @@ export default function RootLayout({ children }) {
 
         {/* Top Fixed Bar */}
         <div style={{
+          zIndex: 1,
           position: 'fixed',
           top: '0',
           backgroundColor: 'white',
           width: '100vw',
-          height: '2rem'
+          height: '4rem'
         }}>
         </div>
 
         {/* LAYOUT for PAGE */}
         <div style={{
-          paddingTop: '2rem',
-          paddingBottom: '2rem',
+          marginTop: '2rem',
           display: 'grid',
           gridTemplateColumns: '1fr 3fr',
-          height: '100rem'
-          // height: '100vh'
+          height: 'calc(100vh - 4rem)'
         }}>
 
           {/* LAYOUT for Sidebar */}
           <div style={{
             position: 'fixed',
             left: '2.5vw',
-            top: '2rem',
-            bottom: '2rem', 
-            backgroundColor: 'gray',
+            backgroundColor: 'white',
             width: '22.5vw',
-            height: '100%'
           }}>
             <Sidebar />
           </div>
@@ -50,10 +46,9 @@ export default function RootLayout({ children }) {
           {/* LAYOUT for Main Content */}
           <div style={{
             marginLeft: '25vw',
-            backgroundColor: 'lightgray',
-            height: '100%',
+            backgroundColor: 'white',
             width: '72.5vw',
-            borderLeft: '1rem black solid'
+            borderLeft: '2rem white solid'
           }}>
             {children}
           </div>
@@ -65,7 +60,7 @@ export default function RootLayout({ children }) {
           bottom: '0',
           backgroundColor: 'white',
           width: '100vw',
-          height: '2rem'
+          height: '4rem'
         }}></div>
       </body>
     </html>
