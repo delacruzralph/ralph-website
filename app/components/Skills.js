@@ -4,10 +4,10 @@ export default function Skills({ id, title }) {
       backgroundColor: 'darkgray',
       height: 'calc(100vh - 8rem)',
       marginBlock: '2rem',
-      // borderLeft: '2rem lightgray solid',
       borderTopRightRadius: '4rem',
       borderBottomRightRadius: '4rem',
-      scrollSnapAlign: 'start'
+      scrollSnapAlign: 'start',
+      padding: '2rem'
     }}>
       <h1>{title}</h1>
     </section>

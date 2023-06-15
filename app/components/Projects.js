@@ -3,29 +3,45 @@
 import { useState } from 'react';
 
 const projects = [
-  { name: 'Project 1', description: 'This is Project 1', photo: '/path/to/photo1.jpg' },
-  { name: 'Project 2', description: 'This is Project 2', photo: '/path/to/photo2.jpg' },
-  { name: 'Project 3', description: 'This is Project 3', photo: '/path/to/photo3.jpg' },
-  { name: 'Project 4', description: 'This is Project 4', photo: '/path/to/photo4.jpg' },
+  {
+    name: 'Pomotivation',
+    description: 'A productivity application that combines the Pomodoro technique with motivational quotes, developed using React and deployed on GitHub Pages.',
+    photo: '/path/to/photo1.jpg'
+  },
+  {
+    name: 'SEL Zoo',
+    description: 'SEL Zoo is a mobile-first web platform providing social emotional learning tools, developed using ReactJS, MaterialUI, and Firebase API.',
+    photo: '/path/to/photo2.jpg'
+  },
+  {
+    name: 'Weight to Plate',
+    description: 'A JavaScript app that visually calculates barbell weight distribution for weightlifters.',
+    photo: '/path/to/photo3.jpg'
+  },
+  {
+    name: 'Portfolio Website',
+    description: 'This is Project 4',
+    photo: '/path/to/photo4.jpg'
+  },
 ];
 
 function ProjectCard({ project, handleButtonClick }) {
   return (
-    <div style={{
-      backgroundColor: 'lightgray',
+    <div onClick={handleButtonClick(project)} style={{
       borderRadius: '1rem',
       overflow: 'hidden',
       display: 'flex',
-      flexDirection: 'column', // add this
+      flexDirection: 'column'
     }}>
       <div style={{
         backgroundColor: 'gray',
-        height: '75%', // adjust this as needed
+        height: '75%',
         width: '100%',
       }}></div>
-      <h2>{project.name}</h2>
-      <p>{project.description}</p>
-      <button onClick={handleButtonClick(project)}>Learn More</button>
+      <h3 style={{
+        marginTop: '.5rem'
+      }}>{project.name}</h3>
+      <p style={{ fontSize: '.75rem', marginBottom: '.5rem' }}>{project.description}</p>
     </div>
   );
 }
@@ -78,6 +94,7 @@ export default function Projects({ id, title }) {
         position: 'relative',
         transform: activeProject ? 'translateX(100%)' : 'translateX(0)',
         transition: 'transform 0.3s ease-in-out',
+        padding: '2rem'
       }}>
         <h1>{title}</h1>
         <div style={{
