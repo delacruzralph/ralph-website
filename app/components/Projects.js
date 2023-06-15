@@ -5,7 +5,7 @@ import { useState } from 'react';
 const projects = [
   {
     name: 'Pomotivation',
-    description: 'A productivity application that combines the Pomodoro technique with motivational quotes, developed using React and deployed on GitHub Pages.',
+    description: 'A productivity web app that combines the Pomodoro technique with motivational quotes, developed using React and deployed on GitHub Pages.',
     photo: '/path/to/photo1.jpg'
   },
   {
@@ -20,7 +20,7 @@ const projects = [
   },
   {
     name: 'Portfolio Website',
-    description: 'This is Project 4',
+    description: 'A personal showcase of my skills and projects, built with Next.js and React for a smooth, interactive user experience.',
     photo: '/path/to/photo4.jpg'
   },
 ];
@@ -28,20 +28,26 @@ const projects = [
 function ProjectCard({ project, handleButtonClick }) {
   return (
     <div onClick={handleButtonClick(project)} style={{
-      borderRadius: '1rem',
+      borderRadius: '1rem 1rem 0 0',
       overflow: 'hidden',
       display: 'flex',
-      flexDirection: 'column'
+      flexDirection: 'column',
+      height: '100%',
     }}>
       <div style={{
         backgroundColor: 'gray',
         height: '75%',
         width: '100%',
       }}></div>
-      <h3 style={{
-        marginTop: '.5rem'
-      }}>{project.name}</h3>
-      <p style={{ fontSize: '.75rem', marginBottom: '.5rem' }}>{project.description}</p>
+      <div style={{ // add this div
+        height: 'calc(100% - 135px)',
+        overflow: 'auto',
+      }}>
+        <h3 style={{
+          marginTop: '.5rem'
+        }}>{project.name}</h3>
+        <p style={{ fontSize: '.825rem' }}>{project.description}</p>
+      </div>
     </div>
   );
 }
@@ -62,6 +68,7 @@ function Project({ project, active, resetProject }) {
       justifyContent: 'center',
       alignItems: 'center',
       flexDirection: 'column',
+      padding: '2rem'
     }}>
       <h2>{project.name}</h2>
       <p>{project.description}</p>
@@ -101,7 +108,7 @@ export default function Projects({ id, title }) {
           display: 'grid',
           gridTemplateColumns: '1fr 1fr',
           gap: '2rem',
-          padding: '2rem',
+          paddingBlock: '2rem',
           height: 'calc(100% - 3rem)'
         }}>
           {projects.map((project) => (
