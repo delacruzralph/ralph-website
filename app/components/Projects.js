@@ -39,7 +39,7 @@ function ProjectCard({ project, handleButtonClick }) {
         height: '75%',
         width: '100%',
       }}></div>
-      <div style={{ // add this div
+      <div style={{ 
         height: 'calc(100% - 135px)',
         overflow: 'auto',
       }}>
@@ -103,12 +103,12 @@ export default function Projects({ id, title }) {
         transition: 'transform 0.3s ease-in-out',
         padding: '2rem'
       }}>
-        <h1>{title}</h1>
+        <h1 style={{ marginBottom: '2rem'}}>{title}</h1>
         <div style={{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr',
           gap: '2rem',
-          paddingBlock: '2rem',
+          paddingBlock: '0rem',
           height: 'calc(100% - 3rem)'
         }}>
           {projects.map((project) => (
