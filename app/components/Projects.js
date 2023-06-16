@@ -28,18 +28,18 @@ const projects = [
 function ProjectCard({ project, handleButtonClick }) {
   return (
     <div onClick={handleButtonClick(project)} style={{
-      borderRadius: '1rem 1rem 0 0',
       overflow: 'hidden',
       display: 'flex',
       flexDirection: 'column',
       height: '100%',
     }}>
       <div style={{
+        borderRadius: '1rem',
         backgroundColor: 'gray',
         height: '75%',
         width: '100%',
       }}></div>
-      <div style={{ 
+      <div style={{
         height: 'calc(100% - 135px)',
         overflow: 'auto',
       }}>
@@ -103,7 +103,7 @@ export default function Projects({ id, title }) {
         transition: 'transform 0.3s ease-in-out',
         padding: '2rem'
       }}>
-        <h1 style={{ marginBottom: '2rem'}}>{title}</h1>
+        <h2 style={{ marginBottom: '2rem' }}>{title}</h2>
         <div style={{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr',
