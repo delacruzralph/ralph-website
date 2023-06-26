@@ -1,10 +1,12 @@
 'use client'
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 export default function Contact({ id, title }) {
-  const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
-  const [errors, setErrors] = useState({ name: '', email: '', subject: '', message: '' });
+  const formToSend = useRef();
+  const [form, setForm] = useState({ name: '', email: '', message: '' });
+  const [errors, setErrors] = useState({ name: '', email: '', message: '' });
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -17,16 +19,23 @@ export default function Contact({ id, title }) {
     let formErrors = {};
     if (!form.name) formErrors.name = "Name is required";
     if (!form.email) formErrors.email = "Email is required";
-    if (!form.message) formErrors.subject = "Subject is required";
     if (!form.message) formErrors.message = "Message is required";
     setErrors(formErrors);
 
     // If no errors, submit form
     if (!Object.keys(formErrors).length) {
       // Submit form
+      emailjs.sendForm('service_of6aipd', 'template_18o1u49', formToSend.current, '-NRfx1qgtJx6P-pQ5')
+        .then((result) => {
+          console.log(result.text);
+        }, (error) => {
+          console.log(error.text);
+        });
+
       console.log(form);
-      setForm({ name: '', email: '', subject: '', message: '' });
-      setErrors({ name: '', email: '', subject: '', message: '' });
+      e.target.reset();
+      setForm({ name: '', email: '', message: '' });
+      setErrors({ name: '', email: '', message: '' });
     }
   };
 
@@ -51,7 +60,7 @@ export default function Contact({ id, title }) {
         alignItems: 'center',
       }}>
         <div className="contact-text" >
-          <form onSubmit={handleSubmit}>
+          <form ref={formToSend} onSubmit={handleSubmit}>
             <label htmlFor="name" style={{ display: 'block', fontWeight: 'bold' }}><h3>Name</h3></label>
             <input
               type="text"
@@ -73,16 +82,6 @@ export default function Contact({ id, title }) {
               style={{ display: 'block', width: '100%', borderRadius: '.75vh', border: 'none', padding: '.5rem', marginBottom: '.5rem' }}
             />
             {errors.email && <p style={{ marginTop: '-0.25rem', color: 'darkred' }}>{errors.email}</p>}
-
-            <label htmlFor="subject" style={{ display: 'block', fontWeight: 'bold' }}><h3>Subject</h3></label>
-            <input
-              id="subject"
-              name="subject"
-              value={form.subject}
-              onChange={handleChange}
-              style={{ display: 'block', width: '100%', borderRadius: '.75vh', border: 'none', padding: '.5rem', marginBottom: '.5rem' }}
-            />
-            {errors.subject && <p style={{ marginTop: '-0.25rem', color: 'darkred' }}>{errors.subject}</p>}
 
             <label htmlFor="message" style={{ display: 'block', fontWeight: 'bold' }}><h3>Message</h3></label>
             <textarea rows="4"
