@@ -9,14 +9,14 @@ export default function About({ id, title }) {
       scrollSnapAlign: 'start',
       padding: '2rem'
     }}>
-      <h2>{title}</h2>
+      <h2 style={{ marginBottom: '2rem' }}>{title}</h2>
       <div className="about-content" style={{
         display: 'grid',
         gridTemplateColumns: '1fr 1fr',
         gap: '2rem',
-        fontSize: 'clamp(.75rem, 1.125vw, 1rem)',
+        fontSize: '1.5vh',
         lineHeight: '1.5',
-        height: '100%',
+        height: 'calc(100vh - 16rem)',
         alignItems: 'center',
         justifyItems: 'center'
       }}>

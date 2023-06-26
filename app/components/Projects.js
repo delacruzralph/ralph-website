@@ -46,7 +46,10 @@ function ProjectCard({ project, handleButtonClick }) {
         <h3 style={{
           marginTop: '.5rem'
         }}>{project.name}</h3>
-        <p style={{ fontSize: '.825rem' }}>{project.description}</p>
+        <p style={{
+          fontSize: '1.5vh',
+          lineHeight: '1.25'
+        }}>{project.description}</p>
       </div>
     </div>
   );
@@ -109,7 +112,7 @@ export default function Projects({ id, title }) {
           gridTemplateColumns: '1fr 1fr',
           gap: '2rem',
           paddingBlock: '0rem',
-          height: 'calc(100% - 3rem)'
+          height: 'calc(100vh - 16rem)',
         }}>
           {projects.map((project) => (
             <ProjectCard key={project.name} project={project} handleButtonClick={handleButtonClick} />
