@@ -17,7 +17,7 @@ export default function Skills({ id, title }) {
         alignItems: 'center',
         height: 'calc(100vh - 16rem)',
         gap: '1rem',
-        fontSize: '1.5vh',
+        fontSize: '1.75vh',
         lineHeight: '1.5',
       }}>
         <div className="skills-text">

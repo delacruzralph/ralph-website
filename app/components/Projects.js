@@ -64,7 +64,7 @@ function ProjectCard({ project, handleButtonClick }) {
         }}>{project.name}</h3>
         <p style={{
           fontSize: '1.5vh',
-          lineHeight: '1.25'
+          lineHeight: '1.5'
         }}>{project.description}</p>
       </div>
     </div>
@@ -85,25 +85,29 @@ function Project({ project, active, resetProject }) {
       transition: 'opacity 0.3s ease-in-out, visibility 0.3s ease-in-out',
       display: 'grid',
       gridTemplateColumns: '2fr 1fr',
+      alignItems: 'center',
       flexDirection: 'column',
       padding: '2rem',
+      fontSize: '1.75vh',
       textAlign: 'left'
     }}>
       <div className="">
         <h2>{project.name}</h2>
-        <p>{project.description}</p>
+        <p style={{ marginBottom: '1rem' }}>{project.description}</p>
         <h3>Summary</h3>
-        <p>{project.summary}</p>
+        <p style={{ marginBottom: '1rem' }}>{project.summary}</p>
         <h3>Technology Used</h3>
-        <p>{project.technology}</p>
+        <p style={{ marginBottom: '1rem' }}>{project.technology}</p>
         <h3>Features</h3>
-        <p>{project.features}</p>
+        <p style={{ marginBottom: '1rem' }}>{project.features}</p>
         <h3>Future Plans</h3>
-        <p>{project.future}</p>
+        <p style={{ marginBottom: '1rem' }}>{project.future}</p>
       </div>
-      <div className="">
+      <div className="" style={{ height: 'calc(100vh - 32rem)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', alignItems: 'center' }}>
         <img src={project.photo} alt={project.name} />
-        <button onClick={resetProject}>Close</button>
+        <button onClick={resetProject} style={{
+          width: '100%', paddingBlock: '.5rem', marginRight: '-20vw', borderRadius: '.75vh', border: 'none', marginTop: '.5rem', fontWeight: 'bold'
+        }}>Close</button>
       </div>
     </div>
   );

@@ -68,7 +68,7 @@ export default function Contact({ id, title }) {
               name="name"
               value={form.name}
               onChange={handleChange}
-              style={{ display: 'block', width: '100%', borderRadius: '.75vh', border: 'none', padding: '.5rem', marginBottom: '.5rem' }}
+              style={{ display: 'block', width: '100%', borderRadius: '.75vh', border: 'none', padding: '1vh', marginBottom: '.5rem' }}
             />
             {errors.name && <p style={{ marginTop: '-0.25rem', color: 'darkred' }}>{errors.name}</p>}
 
@@ -79,7 +79,7 @@ export default function Contact({ id, title }) {
               name="email"
               value={form.email}
               onChange={handleChange}
-              style={{ display: 'block', width: '100%', borderRadius: '.75vh', border: 'none', padding: '.5rem', marginBottom: '.5rem' }}
+              style={{ display: 'block', width: '100%', borderRadius: '.75vh', border: 'none', padding: '1vh', marginBottom: '.5rem' }}
             />
             {errors.email && <p style={{ marginTop: '-0.25rem', color: 'darkred' }}>{errors.email}</p>}
 
@@ -89,12 +89,12 @@ export default function Contact({ id, title }) {
               name="message"
               value={form.message}
               onChange={handleChange}
-              style={{ display: 'block', width: '100%', borderRadius: '.75vh', border: 'none', padding: '.5rem', marginBottom: '.5rem', resize: "vertical" }}
+              style={{ display: 'block', width: '100%', borderRadius: '.75vh', border: 'none', padding: '1vh', marginBottom: '.5rem', resize: "vertical" }}
             />
             {errors.message && <p style={{ marginTop: '-0.25rem', color: 'darkred' }}>{errors.message}</p>}
 
             <button type="submit" style={{
-              width: '100%', paddingBlock: '.5rem', borderRadius: '.75vh', border: 'none', marginTop: '.5rem', fontWeight: 'bold'
+              width: '100%', paddingBlock: '1.5vh', borderRadius: '.75vh', border: 'none', marginTop: '1vh', fontWeight: 'bold'
             }}>Send</button>
           </form>
         </div>

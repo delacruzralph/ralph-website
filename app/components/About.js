@@ -14,7 +14,7 @@ export default function About({ id, title }) {
         display: 'grid',
         gridTemplateColumns: '1fr 1fr',
         gap: '2rem',
-        fontSize: '1.5vh',
+        fontSize: '1.75vh',
         lineHeight: '1.5',
         height: 'calc(100vh - 16rem)',
         alignItems: 'center',
