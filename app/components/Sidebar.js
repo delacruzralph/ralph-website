@@ -1,5 +1,6 @@
 'use client'
 
+import styles from './Sidebar.module.css';
 import { useState, useEffect } from 'react';
 
 const funFacts = [
@@ -39,28 +40,10 @@ export default function Sidebar() {
   }, []);
 
   return (
-    <div style={{
-      backgroundColor: 'darkgray',
-      height: 'calc(100vh - 8rem)',
-      marginBlock: '2rem',
-      padding: '2rem',
-      borderTopLeftRadius: '4rem',
-      borderBottomLeftRadius: '4rem',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'space-between'
-    }}>
-      <h1 style={{
-        fontSize: '4rem'
-      }}>Ralph Dela Cruz</h1>
+    <div className={styles.sidebar}>
+      <h1>Ralph Dela Cruz</h1>
       <nav>
-        <ul style={{
-          listStyle: 'none',
-          margin: '0',
-          padding: '0',
-          textAlign: 'right',
-          fontSize: 'clamp(1.5rem, 1.5vw, 5rem)'
-        }}>
+        <ul>
           <li><a href="#about" style={{ color: activeSection === 'about' ? 'purple' : 'black' }}>About me</a></li>
           <li><a href="#projects" style={{ color: activeSection === 'projects' ? 'purple' : 'black' }}>Projects</a></li>
           <li><a href="#skills" style={{ color: activeSection === 'skills' ? 'purple' : 'black' }}>Skills</a></li>
@@ -68,9 +51,7 @@ export default function Sidebar() {
           <li><a href="#contact" style={{ color: activeSection === 'contact' ? 'purple' : 'black' }}>Contact me</a></li>
         </ul>
       </nav>
-      <div style={{
-        fontSize: 'clamp(1rem, 1vw, 3rem)'
-      }} className="did-you-know">
+      <div className={styles['did-you-know']}>
         <h4>
           Did you know...
         </h4>

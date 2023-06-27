@@ -1,0 +1,37 @@
+.topFixedBar {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  width: 100vw;
+  height: 4rem;
+}
+
+.pageLayout {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  height: calc(100vh - 4rem);
+}
+
+.sidebarLayout {
+  position: fixed;
+  left: 2.5vw;
+  background-color: white;
+  width: 22.5vw;
+}
+
+.mainContentLayout {
+  margin-left: 25vw;
+  background-color: white;
+  width: 72.5vw;
+  border-left: 2rem white solid;
+}
+
+.bottomFixedBar {
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  width: 100vw;
+  height: 4rem;
+}

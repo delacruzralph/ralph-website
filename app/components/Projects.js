@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react';
+import styles from './Projects.module.css';
 
 const projects = [
   {
@@ -43,29 +44,11 @@ const projects = [
 
 function ProjectCard({ project, handleButtonClick }) {
   return (
-    <div onClick={handleButtonClick(project)} style={{
-      overflow: 'hidden',
-      display: 'flex',
-      flexDirection: 'column',
-      height: '100%',
-    }}>
-      <div style={{
-        borderRadius: '1rem',
-        backgroundColor: 'gray',
-        height: '75%',
-        width: '100%',
-      }}></div>
-      <div style={{
-        height: 'calc(100% - 135px)',
-        overflow: 'auto',
-      }}>
-        <h3 style={{
-          marginTop: '.5rem'
-        }}>{project.name}</h3>
-        <p style={{
-          fontSize: '1.5vh',
-          lineHeight: '1.5'
-        }}>{project.description}</p>
+    <div onClick={handleButtonClick(project)} className={styles.projectCard}>
+      <div className={styles.imageSection}></div>
+      <div className={styles.contentSection}>
+        <h3 className={styles.contentSectionH3}>{project.name}</h3>
+        <p className={styles.contentSectionP}>{project.description}</p>
       </div>
     </div>
   );
@@ -73,41 +56,22 @@ function ProjectCard({ project, handleButtonClick }) {
 
 function Project({ project, active, resetProject }) {
   return (
-    <div style={{
-      position: 'fixed',
-      top: '4rem',
-      left: '25vw',
-      width: '72.5vw',
-      height: 'calc(100vh - 8rem)',
-      backgroundColor: 'white',
-      opacity: active ? 1 : 0,
-      visibility: active ? 'visible' : 'hidden',
-      transition: 'opacity 0.3s ease-in-out, visibility 0.3s ease-in-out',
-      display: 'grid',
-      gridTemplateColumns: '2fr 1fr',
-      alignItems: 'center',
-      flexDirection: 'column',
-      padding: '2rem',
-      fontSize: '1.75vh',
-      textAlign: 'left'
-    }}>
-      <div className="">
+    <div className={`${styles.projectPopup} ${active ? styles.projectPopupActive : ''}`}>
+      <div className='projectPopupContent'>
         <h2>{project.name}</h2>
-        <p style={{ marginBottom: '1rem' }}>{project.description}</p>
+        <p>{project.description}</p>
         <h3>Summary</h3>
-        <p style={{ marginBottom: '1rem' }}>{project.summary}</p>
+        <p>{project.summary}</p>
         <h3>Technology Used</h3>
-        <p style={{ marginBottom: '1rem' }}>{project.technology}</p>
+        <p>{project.technology}</p>
         <h3>Features</h3>
-        <p style={{ marginBottom: '1rem' }}>{project.features}</p>
+        <p>{project.features}</p>
         <h3>Future Plans</h3>
-        <p style={{ marginBottom: '1rem' }}>{project.future}</p>
+        <p>{project.future}</p>
       </div>
-      <div className="" style={{ height: 'calc(100vh - 32rem)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', alignItems: 'center' }}>
+      <div className={styles.imageButtonSection}>
         <img src={project.photo} alt={project.name} />
-        <button onClick={resetProject} style={{
-          width: '100%', paddingBlock: '.5rem', marginRight: '-20vw', borderRadius: '.75vh', border: 'none', marginTop: '.5rem', fontWeight: 'bold'
-        }}>Close</button>
+        <button onClick={resetProject} className={styles.closeButton}>Close</button>
       </div>
     </div>
   );
@@ -126,32 +90,14 @@ export default function Projects({ id, title }) {
 
   return (
     <>
-      <section id={id} style={{
-        backgroundColor: 'darkgray',
-        height: 'calc(100vh - 8rem)',
-        marginBlock: '2rem',
-        borderTopRightRadius: '4rem',
-        borderBottomRightRadius: '4rem',
-        scrollSnapAlign: 'start',
-        position: 'relative',
-        transform: activeProject ? 'translateX(100%)' : 'translateX(0)',
-        transition: 'transform 0.3s ease-in-out',
-        padding: '2rem'
-      }}>
-        <h2 style={{ marginBottom: '2rem' }}>{title}</h2>
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          gap: '2rem',
-          paddingBlock: '0rem',
-          height: 'calc(100vh - 16rem)',
-        }}>
+      <section id={id} className={`${styles.mainSection} ${activeProject ? styles.mainSectionTransformed : ''}`}>
+        <h2 className={styles.mainSectionH2}>{title}</h2>
+        <div className={styles.gridLayout}>
           {projects.map((project) => (
             <ProjectCard key={project.name} project={project} handleButtonClick={handleButtonClick} />
           ))}
         </div>
       </section>
-
       {projects.map((project) => (
         <Project
           key={project.name}
@@ -163,3 +109,9 @@ export default function Projects({ id, title }) {
     </>
   );
 }
+
+
+
+
+
+

@@ -1,0 +1,35 @@
+.section {
+  background-color: darkgray;
+  height: calc(100vh - 8rem);
+  margin-block: 2rem;
+  border-top-right-radius: 4rem;
+  border-bottom-right-radius: 4rem;
+  scroll-snap-align: start;
+  padding: 2rem;
+}
+
+.h2 {
+  margin-bottom: 0.5rem;
+}
+
+.resumeContent {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  height: calc(100vh - 16rem);
+  align-items: center;
+  justify-items: center;
+}
+
+.resumeText {
+  font-size: 1.5vh;
+  line-height: 1.25;
+}
+
+.h3 {
+  margin-bottom: .25rem;
+}
+
+.p {
+  margin-bottom: .75rem;
+}

@@ -1,4 +1,3 @@
-import styles from './page.module.css';
 import About from './components/About';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
@@ -7,7 +6,7 @@ import Contact from './components/Contact';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main>
       <About id='about' title='About me' />
       <Projects id='projects' title='Projects' />
       <Skills id='skills' title='Skills' />

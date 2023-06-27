@@ -1,25 +1,10 @@
+import styles from './About.module.css';
+
 export default function About({ id, title }) {
   return (
-    <section id={id} style={{
-      backgroundColor: 'darkgray',
-      height: 'calc(100vh - 8rem)',
-      marginBlock: '2rem',
-      borderTopRightRadius: '4rem',
-      borderBottomRightRadius: '4rem',
-      scrollSnapAlign: 'start',
-      padding: '2rem'
-    }}>
-      <h2 style={{ marginBottom: '2rem' }}>{title}</h2>
-      <div className="about-content" style={{
-        display: 'grid',
-        gridTemplateColumns: '1fr 1fr',
-        gap: '2rem',
-        fontSize: '1.75vh',
-        lineHeight: '1.5',
-        height: 'calc(100vh - 16rem)',
-        alignItems: 'center',
-        justifyItems: 'center'
-      }}>
+    <section id={id} className={styles.section}>
+      <h2 className={styles.h2}>{title}</h2>
+      <div className={styles.aboutContent}>
         <div className="about-text">
           <div className="background">
             <h3>Background</h3>
@@ -35,7 +20,7 @@ export default function About({ id, title }) {
             </p>
           </div>
 
-          <div className="interests" style={{ marginTop: '1rem' }}>
+          <div className={styles.interests}>
             <h3>Interests</h3>
             <p>
               Off the clock, I'm powerlifting, playing basketball, gaming, or building—from LEGO sets to models.
@@ -45,12 +30,7 @@ export default function About({ id, title }) {
         </div>
 
         <div className="about-images">
-          <div className="img" style={{
-            backgroundColor: 'gray',
-            width: '25vw',
-            height: '25vw',
-            borderRadius: '50%'
-          }}></div>
+          <div className={styles.img}></div>
         </div>
       </div>
     </section>

@@ -1,0 +1,104 @@
+/* Projects.module.css */
+
+.projectCard {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.imageSection {
+  border-radius: 1rem;
+  background-color: gray;
+  height: 75%;
+  width: 100%;
+}
+
+.contentSection {
+  height: calc(100% - 135px);
+  overflow: auto;
+}
+
+.contentSectionH3 {
+  margin-top: .5rem;
+}
+
+.contentSectionP {
+  font-size: 1.5vh;
+  line-height: 1.5;
+}
+
+.projectPopup {
+  position: fixed;
+  top: 4rem;
+  left: 25vw;
+  width: 72.5vw;
+  height: calc(100vh - 8rem);
+  background-color: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  font-size: 1.75vh;
+  text-align: left;
+}
+
+.projectPopupActive {
+  opacity: 1;
+  visibility: visible;
+}
+
+.projectPopup p{
+  margin-bottom: 1rem;
+}
+
+.imageButtonSection {
+  height: calc(100vh - 32rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.closeButton {
+  width: 100%;
+  padding-block: .5rem;
+  margin-right: -20vw;
+  border-radius: .75vh;
+  border: none;
+  margin-top: .5rem;
+  font-weight: bold;
+}
+
+.mainSection {
+  background-color: darkgray;
+  height: calc(100vh - 8rem);
+  margin-block: 2rem;
+  border-top-right-radius: 4rem;
+  border-bottom-right-radius: 4rem;
+  scroll-snap-align: start;
+  position: relative;
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+  padding: 2rem;
+}
+
+.mainSectionTransformed {
+  transform: translateX(100%);
+}
+
+.mainSectionH2 {
+  margin-bottom: 2rem;
+}
+
+.gridLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding-block: 0rem;
+  height: calc(100vh - 16rem);
+}

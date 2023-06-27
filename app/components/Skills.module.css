@@ -1,0 +1,32 @@
+.section {
+  background-color: darkgray;
+  height: calc(100vh - 8rem);
+  margin-block: 2rem;
+  border-top-right-radius: 4rem;
+  border-bottom-right-radius: 4rem;
+  scroll-snap-align: start;
+  padding: 2rem;
+}
+
+.h2 {
+  margin-bottom: 2rem;
+}
+
+.skillsContent {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-items: center;
+  align-items: center;
+  height: calc(100vh - 16rem);
+  gap: 1rem;
+  font-size: 1.75vh;
+  line-height: 1.5;
+}
+
+.h3 {
+  margin-top: 1rem;
+}
+
+.ul {
+  list-style-position: inside;
+}

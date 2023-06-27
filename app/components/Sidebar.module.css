@@ -1,0 +1,28 @@
+/* Sidebar.module.css */
+.sidebar {
+  background-color: darkgray;
+  height: calc(100vh - 8rem);
+  margin-block: 2rem;
+  padding: 2rem;
+  border-top-left-radius: 4rem;
+  border-bottom-left-radius: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar h1 {
+  font-size: 4rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  font-size: clamp(1.5rem, 1.5vw, 5rem);
+}
+
+.did-you-know {
+  font-size: clamp(1rem, 1vw, 3rem);
+}

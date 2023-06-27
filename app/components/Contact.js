@@ -1,5 +1,6 @@
 'use client'
 
+import styles from './Contact.module.css';
 import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
@@ -40,65 +41,47 @@ export default function Contact({ id, title }) {
   };
 
   return (
-    <section id={id} style={{
-      backgroundColor: 'darkgray',
-      height: 'calc(100vh - 8rem)',
-      marginBlock: '2rem',
-      borderTopRightRadius: '4rem',
-      borderBottomRightRadius: '4rem',
-      scrollSnapAlign: 'start',
-      padding: '2rem',
-    }}>
-      <h1 style={{ marginBottom: '1rem' }}>{title}</h1>
-      <div className="contact-content" style={{
-        display: 'grid',
-        gridTemplateColumns: '2fr 1fr',
-        fontSize: '1.5vh',
-        lineHeight: '1.5',
-        height: 'calc(100vh - 16rem)',
-        gap: '1rem',
-        alignItems: 'center',
-      }}>
-        <div className="contact-text" >
+    <section id={id} className={styles.section}>
+      <h1 className={styles.h1}>{title}</h1>
+      <div className={styles.contactContent}>
+        <div className="contact-text">
           <form ref={formToSend} onSubmit={handleSubmit}>
-            <label htmlFor="name" style={{ display: 'block', fontWeight: 'bold' }}><h3>Name</h3></label>
+            <label htmlFor="name" className={styles.label}><h3>Name</h3></label>
             <input
               type="text"
               id="name"
               name="name"
               value={form.name}
               onChange={handleChange}
-              style={{ display: 'block', width: '100%', borderRadius: '.75vh', border: 'none', padding: '1vh', marginBottom: '.5rem' }}
+              className={styles.input}
             />
-            {errors.name && <p style={{ marginTop: '-0.25rem', color: 'darkred' }}>{errors.name}</p>}
+            {errors.name && <p className={styles.error}>{errors.name}</p>}
 
-            <label htmlFor="email" style={{ display: 'block', fontWeight: 'bold' }}><h3>Email</h3></label>
+            <label htmlFor="email" className={styles.label}><h3>Email</h3></label>
             <input
               type="email"
               id="email"
               name="email"
               value={form.email}
               onChange={handleChange}
-              style={{ display: 'block', width: '100%', borderRadius: '.75vh', border: 'none', padding: '1vh', marginBottom: '.5rem' }}
+              className={styles.input}
             />
-            {errors.email && <p style={{ marginTop: '-0.25rem', color: 'darkred' }}>{errors.email}</p>}
+            {errors.email && <p className={styles.error}>{errors.email}</p>}
 
-            <label htmlFor="message" style={{ display: 'block', fontWeight: 'bold' }}><h3>Message</h3></label>
+            <label htmlFor="message" className={styles.label}><h3>Message</h3></label>
             <textarea rows="4"
               id="message"
               name="message"
               value={form.message}
               onChange={handleChange}
-              style={{ display: 'block', width: '100%', borderRadius: '.75vh', border: 'none', padding: '1vh', marginBottom: '.5rem', resize: "vertical" }}
+              className={styles.input}
             />
-            {errors.message && <p style={{ marginTop: '-0.25rem', color: 'darkred' }}>{errors.message}</p>}
+            {errors.message && <p className={styles.error}>{errors.message}</p>}
 
-            <button type="submit" style={{
-              width: '100%', paddingBlock: '1.5vh', borderRadius: '.75vh', border: 'none', marginTop: '1vh', fontWeight: 'bold'
-            }}>Send</button>
+            <button type="submit" className={styles.button}>Send</button>
           </form>
         </div>
-        <div className="contact-img" style={{ justifySelf: 'center' }}>hi</div>
+        <div className={styles.contactImg}>hi</div>
       </div>
     </section>
   );
