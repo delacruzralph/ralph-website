@@ -42,7 +42,7 @@ export default function Contact({ id, title }) {
 
   return (
     <section id={id} className={styles.section}>
-      <h1 className={styles.h1}>{title}</h1>
+      <h1 className={styles.h2}>{title}</h1>
       <div className={styles.contactContent}>
         <div className="contact-text">
           <form ref={formToSend} onSubmit={handleSubmit}>

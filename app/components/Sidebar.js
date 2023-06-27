@@ -47,7 +47,7 @@ export default function Sidebar() {
           <li><a href="#about" style={{ color: activeSection === 'about' ? 'purple' : 'black' }}>About me</a></li>
           <li><a href="#projects" style={{ color: activeSection === 'projects' ? 'purple' : 'black' }}>Projects</a></li>
           <li><a href="#skills" style={{ color: activeSection === 'skills' ? 'purple' : 'black' }}>Skills</a></li>
-          <li><a href="#resume" style={{ color: activeSection === 'resume' ? 'purple' : 'black' }}>Resume</a></li>
+          <li><a href="#resume" style={{ color: activeSection === 'resume' ? 'purple' : 'black' }}>Experience</a></li>
           <li><a href="#contact" style={{ color: activeSection === 'contact' ? 'purple' : 'black' }}>Contact me</a></li>
         </ul>
       </nav>

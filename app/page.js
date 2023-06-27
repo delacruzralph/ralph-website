@@ -10,7 +10,7 @@ export default function Home() {
       <About id='about' title='About me' />
       <Projects id='projects' title='Projects' />
       <Skills id='skills' title='Skills' />
-      <Resume id='resume' title='Resume' />
+      <Resume id='resume' title='Experience' />
       <Contact id='contact' title='Contact me' />
     </main>
   )

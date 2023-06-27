@@ -9,24 +9,23 @@
 }
 
 .h2 {
+  font-size: clamp(2rem, 3vw, 3rem);
   margin-bottom: 0.5rem;
 }
 
 .resumeContent {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 2rem;
   height: calc(100vh - 16rem);
   align-items: center;
-  justify-items: center;
 }
 
 .resumeText {
-  font-size: 1.5vh;
-  line-height: 1.25;
+  font-size: clamp(.75rem, 1.25vw, 1.5rem);
+  line-height: 1.2;
 }
 
 .h3 {
+  font-size: clamp(.75rem, 1.25vw, 1.5rem);
   margin-bottom: .25rem;
 }
 

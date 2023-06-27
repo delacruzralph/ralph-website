@@ -1,31 +1,26 @@
-/* Projects.module.css */
-
 .projectCard {
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
   height: 100%;
 }
 
 .imageSection {
   border-radius: 1rem;
   background-color: gray;
-  height: 75%;
+  height:  50%;
   width: 100%;
 }
 
 .contentSection {
-  height: calc(100% - 135px);
-  overflow: auto;
 }
 
 .contentSectionH3 {
+  font-size: clamp(1rem, 1.5vw, 2rem);
   margin-top: .5rem;
 }
 
 .contentSectionP {
-  font-size: 1.5vh;
-  line-height: 1.5;
+  font-size: clamp(.75rem, 1.25vw, 1.5rem);
+  line-height: 1.25;
 }
 
 .projectPopup {
@@ -43,7 +38,7 @@
   align-items: center;
   flex-direction: column;
   padding: 2rem;
-  font-size: 1.75vh;
+  font-size: clamp(.75rem, 1.25vw, 2rem);
   text-align: left;
 }
 
@@ -66,12 +61,14 @@
 
 .closeButton {
   width: 100%;
-  padding-block: .5rem;
+  padding: 1rem;
   margin-right: -20vw;
   border-radius: .75vh;
   border: none;
   margin-top: .5rem;
   font-weight: bold;
+  text-align: left;
+  background-color: darkgray;
 }
 
 .mainSection {
@@ -92,6 +89,7 @@
 }
 
 .mainSectionH2 {
+  font-size: clamp(2rem, 3vw, 3rem);
   margin-bottom: 2rem;
 }
 
