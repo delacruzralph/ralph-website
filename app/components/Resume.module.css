@@ -1,5 +1,5 @@
 .section {
-  background-color: darkgray;
+  background-color: var(--dark-purple);
   height: calc(100vh - 8rem);
   margin-block: 2rem;
   border-top-right-radius: 4rem;
@@ -10,12 +10,15 @@
 
 .h2 {
   font-size: clamp(2rem, 3vw, 3rem);
+  color: var(--gold);
   margin-bottom: 0.5rem;
 }
 
 .resumeContent {
   display: grid;
   height: calc(100vh - 16rem);
+  color: var(--light-neutral);
+  grid-template-columns: 3fr 1fr;
   align-items: center;
 }
 
@@ -26,6 +29,7 @@
 
 .h3 {
   font-size: clamp(.75rem, 1.25vw, 1.5rem);
+  color: var(--light-purple);
   margin-bottom: .25rem;
 }
 

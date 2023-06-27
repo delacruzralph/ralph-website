@@ -1,6 +1,6 @@
 /* Sidebar.module.css */
 .sidebar {
-  background-color: darkgray;
+  background-color: var(--dark-purple);
   height: calc(100vh - 8rem);
   margin-block: 2rem;
   padding: 2rem;
@@ -12,7 +12,8 @@
 }
 
 .sidebar h1 {
-  font-size: clamp(3rem, 5vw, 5rem);;
+  font-size: clamp(3rem, 5vw, 5rem);
+  color: var(--light-neutral);;
 }
 
 .sidebar ul {
@@ -23,6 +24,11 @@
   font-size: clamp(1.5rem, 2vw, 2rem);
 }
 
+.h4 {
+  color: var(--light-purple);
+}
+
 .did-you-know {
   font-size: clamp(.75rem, 1vw, 1.25rem);
+  color: var(--light-neutral);;
 }

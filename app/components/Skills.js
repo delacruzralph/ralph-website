@@ -6,7 +6,7 @@ export default function Skills({ id, title }) {
       <h2 className={styles.h2}>{title}</h2>
       <div className={styles.skillsContent}>
         <div className="skills-text">
-          <h3>Web Development</h3>
+          <h3 className={styles.h3}>Web Development</h3>
           <ul className={styles.ul}>
             <li>Proficiency in JavaScript, HTML/CSS, and Python</li>
             <li>Experience with React, Bootstrap, and Next.js frameworks</li>

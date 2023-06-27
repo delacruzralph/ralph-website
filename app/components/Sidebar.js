@@ -44,15 +44,15 @@ export default function Sidebar() {
       <h1>Ralph Dela Cruz</h1>
       <nav>
         <ul>
-          <li><a href="#about" style={{ color: activeSection === 'about' ? 'purple' : 'black' }}>About me</a></li>
-          <li><a href="#projects" style={{ color: activeSection === 'projects' ? 'purple' : 'black' }}>Projects</a></li>
-          <li><a href="#skills" style={{ color: activeSection === 'skills' ? 'purple' : 'black' }}>Skills</a></li>
-          <li><a href="#resume" style={{ color: activeSection === 'resume' ? 'purple' : 'black' }}>Experience</a></li>
-          <li><a href="#contact" style={{ color: activeSection === 'contact' ? 'purple' : 'black' }}>Contact me</a></li>
+          <li><a href="#about" style={{ color: activeSection === 'about' ? 'var(--gold)' : 'var(--light-neutral)' }}>About me</a></li>
+          <li><a href="#projects" style={{ color: activeSection === 'projects' ? 'var(--gold)' : 'var(--light-neutral)' }}>Projects</a></li>
+          <li><a href="#skills" style={{ color: activeSection === 'skills' ? 'var(--gold)' : 'var(--light-neutral)' }}>Skills</a></li>
+          <li><a href="#resume" style={{ color: activeSection === 'resume' ? 'var(--gold)' : 'var(--light-neutral)' }}>Experience</a></li>
+          <li><a href="#contact" style={{ color: activeSection === 'contact' ? 'var(--gold)' : 'var(--light-neutral)' }}>Contact me</a></li>
         </ul>
       </nav>
       <div className={styles['did-you-know']}>
-        <h4>
+        <h4 className={styles.h4}>
           Did you know...
         </h4>
         <p>{funFact}</p>
