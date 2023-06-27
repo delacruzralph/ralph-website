@@ -11,6 +11,20 @@
   --dark-purple: #21132E;
   --gold: #C09421;
   --light-neutral: #D9D9D9;
+
+}
+
+::-webkit-scrollbar {
+  width: .25rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bg-purple);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--light-purple);
+  border-radius: 10rem;
 }
 
 * {
