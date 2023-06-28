@@ -1,4 +1,6 @@
+import Image from 'next/image';
 import styles from './About.module.css';
+import me from '../../public/me.jpg';
 
 export default function About({ id, title }) {
   return (
@@ -29,8 +31,16 @@ export default function About({ id, title }) {
           </div>
         </div>
 
-        <div className="about-images">
-          <div className={styles.img}></div>
+        <div className={styles.img}>
+          <Image
+            src={me}
+            alt='Ralph'
+            fill
+            style={{
+              objectFit: 'cover',
+              objectPosition: 'top',
+              borderRadius: 'inherit'
+            }} />
         </div>
       </div>
     </section>

@@ -44,6 +44,14 @@ export default function Contact({ id, title }) {
     <section id={id} className={styles.section}>
       <h1 className={styles.h2}>{title}</h1>
       <div className={styles.contactContent}>
+        <div className={styles.contactInfo}>
+          <h2>My Email</h2>
+          <p>ralphlewisdelacruz@gmail.com</p>
+          <h2>My Phone Number</h2>
+          <p>201-982-5628</p>
+          <h2>My Location</h2>
+          <p>NJ/NYC</p>
+        </div>
         <div className="contact-text">
           <form ref={formToSend} onSubmit={handleSubmit}>
             <label htmlFor="name" className={styles.label}><h3>Name</h3></label>
@@ -81,14 +89,7 @@ export default function Contact({ id, title }) {
             <button type="submit" className={styles.button}>Send</button>
           </form>
         </div>
-        <div className={styles.contactImg}>
-          <h2>My Email</h2>
-          <p>ralphlewisdelacruz@gmail.com</p>
-          <h2>My Phone Number</h2>
-          <p>201-982-5628</p>
-          <h2>My Location</h2>
-          <p>NJ/NYC</p>
-        </div>
+
       </div>
     </section>
   );

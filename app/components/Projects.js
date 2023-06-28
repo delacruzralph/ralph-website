@@ -6,6 +6,7 @@ import Image from 'next/image';
 import pomotivation from '../../public/pomotivation.png'
 import selzoo from '../../public/selzoo.png'
 import weightplate from '../../public/weight-to-plate.png'
+import portfolio from '../../public/portfolio.png'
 
 const projects = [
   {
@@ -16,8 +17,8 @@ const projects = [
     technology: 'The application is built using React and styled with CSS.',
     features: 'The core features include a Pomodoro timer, random quote generator, and a clean, intuitive user interface.',
     future: 'Future enhancements may include user customization options such as changing the timer duration, adding custom quotes, and integrating with task management tools.',
-    github: 'https://github.com/delacruzralph',
-    website: 'https://github.com/delacruzralph'
+    github: 'https://github.com/delacruzralph/pomodoro-quote',
+    website: 'https://delacruzralph.github.io/pomodoro-quote/'
   },
   {
     name: 'SEL Zoo',
@@ -27,8 +28,8 @@ const projects = [
     technology: 'The platform is built using React and styled with CSS.',
     features: ' SELZoo offers a variety of SEL teaching resources, a user-friendly interface, and a focus on early childhood development.',
     future: 'Future plans include expanding the resource library, adding user accounts for personalized learning paths, and integrating with other educational platforms.',
-    github: '',
-    website: ''
+    github: 'https://github.com/liu-caro/sel-site',
+    website: 'https://sel-zoo.web.app/'
   },
   {
     name: 'Weight to Plate',
@@ -38,18 +39,18 @@ const projects = [
     technology: 'The application is built using React and styled with CSS. The codebase is structured with MVC architecture.',
     features: 'The application supports various weight units and plate sizes, and provides a simple, user-friendly interface.',
     future: 'Future updates may include support for more weight units, integration with workout planning tools, and a mobile app version.',
-    github: '',
-    website: ''
+    github: 'https://github.com/delacruzralph/Weight-To-Plate-v2',
+    website: 'https://delacruzralph.github.io/Weight-To-Plate-v2/'
   },
   {
     name: 'Portfolio Website',
     description: 'A personal showcase of my skills and projects, built with Next.js and React for a smooth, interactive user experience.',
-    photo: '/path/to/photo4.jpg',
+    photo: portfolio,
     summary: 'The website provides an overview of my work and background, with detailed sections for each project and a contact form for visitors to get in touch.',
     technology: 'The website is built using Next.js, a popular React framework, and styled with CSS.',
     features: 'The website features an About Me section, a Projects section with detailed project cards, a Skills section, a Resume section, and a Contact Me form.',
     future: 'Future updates may include a blog section, more detailed project pages, and integration with LinkedIn and GitHub for real-time updates.',
-    github: '',
+    github: 'https://github.com/delacruzralph/ralph-website',
     website: ''
   },
 ];
