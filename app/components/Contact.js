@@ -81,7 +81,14 @@ export default function Contact({ id, title }) {
             <button type="submit" className={styles.button}>Send</button>
           </form>
         </div>
-        <div className={styles.contactImg}>hi</div>
+        <div className={styles.contactImg}>
+          <h2>My Email</h2>
+          <p>ralphlewisdelacruz@gmail.com</p>
+          <h2>My Phone Number</h2>
+          <p>201-982-5628</p>
+          <h2>My Location</h2>
+          <p>NJ/NYC</p>
+        </div>
       </div>
     </section>
   );
