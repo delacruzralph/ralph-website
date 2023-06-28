@@ -45,7 +45,7 @@ const projects = [
 function ProjectCard({ project, handleButtonClick }) {
   return (
     <div onClick={handleButtonClick(project)} className={styles.projectCard}>
-      <div className={styles.imageSection}></div>
+      <div className={styles.imageSection} style={{ backgroundImage: `$`}}></div>
       <div className={styles.contentSection}>
         <h3 className={styles.contentSectionH3}>{project.name}</h3>
         <p className={styles.contentSectionP}>{project.description}</p>
