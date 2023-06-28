@@ -1,6 +1,12 @@
 .projectCard {
   overflow: hidden;
   height: 100%;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.projectCard:hover {
+  transform: scale(1.1);
 }
 
 .imageSection {
@@ -8,6 +14,7 @@
   background-color: gray;
   height:  50%;
   width: 100%;
+  position: relative;
 }
 
 .contentSectionH3 {
@@ -33,7 +40,8 @@
   visibility: hidden;
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2fr 2fr;
+  gap: 1rem;
   align-items: center;
   flex-direction: column;
   padding: 2rem;
@@ -50,25 +58,28 @@
   margin-bottom: 1rem;
 }
 
-.imageButtonSection {
-  height: calc(100vh - 32rem);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+.projectPopupImage {
+  height: calc(100vh - 16rem);
+  position: relative;
 }
 
 .closeButton {
   width: 100%;
   padding: 1rem;
-  margin-right: -20vw;
   border-radius: .75vh;
   border: none;
-  margin-top: .5rem;
-  font-weight: bold;
   text-align: left;
-  color: white;
+  font-weight: bold;
+  font-size: clamp(.75rem, 1.25vw, 2rem);
+  transform: translateX(75%);
+  color: var(--light-neutral);
   background-color: var(--dark-purple);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  transform: translateX(50%);
 }
 
 .mainSection {

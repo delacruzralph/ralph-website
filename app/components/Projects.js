@@ -3,35 +3,43 @@
 import { useState } from 'react';
 import styles from './Projects.module.css';
 import Image from 'next/image';
-import Image1 from '../../public/pomotivation.png'
+import pomotivation from '../../public/pomotivation.png'
+import selzoo from '../../public/selzoo.png'
+import weightplate from '../../public/weight-to-plate.png'
 
 const projects = [
   {
     name: 'Pomotivation',
     description: 'A productivity web app that combines the Pomodoro technique with motivational quotes, developed using React and deployed on GitHub Pages.',
-    photo: './../pomotivation.png',
+    photo: pomotivation,
     summary: 'The application provides a timer following the Pomodoro Technique (25 minutes of focused work followed by a 5-minute break). Each work or break session is accompanied by a randomly generated inspirational quote to keep users motivated.',
     technology: 'The application is built using React and styled with CSS.',
     features: 'The core features include a Pomodoro timer, random quote generator, and a clean, intuitive user interface.',
-    future: 'Future enhancements may include user customization options such as changing the timer duration, adding custom quotes, and integrating with task management tools.'
+    future: 'Future enhancements may include user customization options such as changing the timer duration, adding custom quotes, and integrating with task management tools.',
+    github: 'https://github.com/delacruzralph',
+    website: 'https://github.com/delacruzralph'
   },
   {
     name: 'SEL Zoo',
     description: 'SEL Zoo is a mobile-first web platform providing social emotional learning tools, developed using ReactJS, MaterialUI, and Firebase API.',
-    photo: '/path/to/photo2.jpg',
+    photo: selzoo,
     summary: 'The platform provides resources and tools for parents to teach SEL, with a focus on early childhood development.',
     technology: 'The platform is built using React and styled with CSS.',
     features: ' SELZoo offers a variety of SEL teaching resources, a user-friendly interface, and a focus on early childhood development.',
-    future: 'Future plans include expanding the resource library, adding user accounts for personalized learning paths, and integrating with other educational platforms.'
+    future: 'Future plans include expanding the resource library, adding user accounts for personalized learning paths, and integrating with other educational platforms.',
+    github: '',
+    website: ''
   },
   {
     name: 'Weight to Plate',
     description: 'A JavaScript app that visually calculates barbell weight distribution for weightlifters.',
-    photo: '/path/to/photo3.jpg',
+    photo: weightplate,
     summary: 'The application takes a target weight as input and provides the combination of weight plates needed to reach that weight on a barbell.',
     technology: 'The application is built using React and styled with CSS. The codebase is structured with MVC architecture.',
     features: 'The application supports various weight units and plate sizes, and provides a simple, user-friendly interface.',
-    future: 'Future updates may include support for more weight units, integration with workout planning tools, and a mobile app version.'
+    future: 'Future updates may include support for more weight units, integration with workout planning tools, and a mobile app version.',
+    github: '',
+    website: ''
   },
   {
     name: 'Portfolio Website',
@@ -40,7 +48,9 @@ const projects = [
     summary: 'The website provides an overview of my work and background, with detailed sections for each project and a contact form for visitors to get in touch.',
     technology: 'The website is built using Next.js, a popular React framework, and styled with CSS.',
     features: 'The website features an About Me section, a Projects section with detailed project cards, a Skills section, a Resume section, and a Contact Me form.',
-    future: 'Future updates may include a blog section, more detailed project pages, and integration with LinkedIn and GitHub for real-time updates.'
+    future: 'Future updates may include a blog section, more detailed project pages, and integration with LinkedIn and GitHub for real-time updates.',
+    github: '',
+    website: ''
   },
 ];
 
@@ -48,7 +58,15 @@ function ProjectCard({ project, handleButtonClick }) {
   return (
     <div onClick={handleButtonClick(project)} className={styles.projectCard}>
       <div className={styles.imageSection}>
-        <Image src={Image1} width="100%" height="100%" alt="Pomotivation" />
+        <Image
+          src={project.photo}
+          alt={project.name}
+          fill
+          style={{
+            objectFit: 'cover',
+            objectPosition: 'top',
+            borderRadius: 'inherit'
+          }} />
       </div>
       <div className={styles.contentSection}>
         <h3 className={styles.contentSectionH3}>{project.name}</h3>
@@ -73,10 +91,22 @@ function Project({ project, active, resetProject }) {
         <h3>Future Plans</h3>
         <p>{project.future}</p>
       </div>
-      <div className={styles.imageButtonSection}>
-        <img src={project.photo} alt={project.name} />
-        <button onClick={resetProject} className={styles.closeButton}>Close</button>
+      <div className={styles.projectPopupImage}>
+        <Image
+          src={project.photo}
+          alt={project.name}
+          fill
+          style={{
+            objectFit: 'cover',
+            borderRadius: '1rem'
+          }} />
       </div>
+      <div className="Links">
+        <a href={project.github} target='_blank'>Github Repository </a>
+        |
+        <a href={project.website} target='_blank'> Website</a>
+      </div>
+      <button onClick={resetProject} className={styles.closeButton}>Close</button>
     </div>
   );
 }

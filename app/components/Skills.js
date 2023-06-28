@@ -1,4 +1,8 @@
 import styles from './Skills.module.css';
+import Image from 'next/image';
+import wix from '../../public/wix.png'
+import logo from '../../public/logo.png'
+import squarespace from '../../public/squarespace.png'
 
 export default function Skills({ id, title }) {
   return (
@@ -26,10 +30,39 @@ export default function Skills({ id, title }) {
             <li>Leadership in team management, event organization, finance oversight, and community relations</li>
           </ul>
         </div>
-        <div className="skills-images">
-          hi
+        <div className={styles.skillImgSection}>
+          <div className={styles.skillImg}>
+            <Image
+              src={squarespace}
+              alt='Squarespace Web Design'
+              fill
+              style={{
+                objectFit: 'cover',
+                borderRadius: 'inherit'
+              }} />
+          </div>
+          <div className={styles.skillImg}>
+            <Image
+              src={logo}
+              alt='Nomads Logo'
+              fill
+              style={{
+                objectFit: 'contain'
+              }} />
+          </div>
+          <div className={styles.skillImg}>
+            <Image
+              src={wix}
+              alt='Wix Web Design'
+              fill
+              style={{
+                objectFit: 'cover',
+                objectPosition: 'top',
+                borderRadius: 'inherit'
+              }} />
+          </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 }
