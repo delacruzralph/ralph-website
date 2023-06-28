@@ -2,12 +2,14 @@
 
 import { useState } from 'react';
 import styles from './Projects.module.css';
+import Image from 'next/image';
+import Image1 from '../../public/pomotivation.png'
 
 const projects = [
   {
     name: 'Pomotivation',
     description: 'A productivity web app that combines the Pomodoro technique with motivational quotes, developed using React and deployed on GitHub Pages.',
-    photo: '/path/to/photo1.jpg',
+    photo: './../pomotivation.png',
     summary: 'The application provides a timer following the Pomodoro Technique (25 minutes of focused work followed by a 5-minute break). Each work or break session is accompanied by a randomly generated inspirational quote to keep users motivated.',
     technology: 'The application is built using React and styled with CSS.',
     features: 'The core features include a Pomodoro timer, random quote generator, and a clean, intuitive user interface.',
@@ -45,7 +47,9 @@ const projects = [
 function ProjectCard({ project, handleButtonClick }) {
   return (
     <div onClick={handleButtonClick(project)} className={styles.projectCard}>
-      <div className={styles.imageSection} style={{ backgroundImage: `$`}}></div>
+      <div className={styles.imageSection}>
+        <Image src={Image1} width="100%" height="100%" alt="Pomotivation" />
+      </div>
       <div className={styles.contentSection}>
         <h3 className={styles.contentSectionH3}>{project.name}</h3>
         <p className={styles.contentSectionP}>{project.description}</p>
