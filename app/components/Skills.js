@@ -1,8 +1,7 @@
 import styles from './Skills.module.css';
 import Image from 'next/image';
-import wix from '../../public/wix.png'
 import logo from '../../public/logo.png'
-import squarespace from '../../public/squarespace.png'
+import wix from '../../public/wix.png'
 
 export default function Skills({ id, title }) {
   return (
@@ -32,34 +31,27 @@ export default function Skills({ id, title }) {
         </div>
         <div className={styles.skillImgSection}>
           <div className={styles.skillImg}>
-            <Image
-              src={squarespace}
-              alt='Squarespace Web Design'
-              fill
-              style={{
-                objectFit: 'cover',
-                borderRadius: 'inherit'
-              }} />
+            <a href="https://www.youtube.com/watch?v=TbY1OSXF4gA" target='_blank'>
+              <Image
+                src={logo}
+                alt='Nomads Logo'
+                fill
+                style={{
+                  objectFit: 'contain'
+                }} />
+            </a>
           </div>
           <div className={styles.skillImg}>
-            <Image
-              src={logo}
-              alt='Nomads Logo'
-              fill
-              style={{
-                objectFit: 'contain'
-              }} />
-          </div>
-          <div className={styles.skillImg}>
-            <Image
-              src={wix}
-              alt='Wix Web Design'
-              fill
-              style={{
-                objectFit: 'cover',
-                objectPosition: 'top',
-                borderRadius: 'inherit'
-              }} />
+            <a href="https://ralphlewisdelacruz.wixsite.com/ralph" target='_blank'>
+              <Image
+                src={wix}
+                alt='Wix Web Design'
+                fill
+                style={{
+                  objectFit: 'cover',
+                  objectPosition: 'top',
+                }} />
+            </a>
           </div>
         </div>
       </div>
