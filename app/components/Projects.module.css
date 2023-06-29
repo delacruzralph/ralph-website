@@ -68,7 +68,10 @@
   color: var(--dark-purple);
   display: flex;
   gap: 1rem;
-  transition: color .3s ease-in-out;
+}
+
+.links a {
+  transition: color .2s ease-in-out;
 }
 
 .links a:hover {
