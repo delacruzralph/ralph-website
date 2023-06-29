@@ -9,7 +9,7 @@
 }
 
 .h2 {
-  font-size: clamp(2rem, 3vw, 3rem);
+  font-size: clamp(3vh, 3vw, 5vh);
   color: var(--gold);;
   margin-bottom: 1rem;
 }
@@ -17,7 +17,7 @@
 .contactContent {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  font-size: 1.5vh;
+  font-size: clamp(1vh, 1.25vw, 5vh);
   line-height: 2.5;
   height: calc(100vh - 16rem);
   gap: 1rem;
@@ -33,7 +33,7 @@
 
 .label {
   display: block;
-  font-size: clamp(.75rem, 1vw, 1.5rem);
+  font-size: clamp(1vh, 1.25vw, 5vh);
   color: var(--light-purple);
   font-weight: bold;
 }
@@ -44,7 +44,7 @@
   border-radius: .75vh;
   border: none;
   padding: 1vh;
-  font-size: clamp(.75rem, 1vw, 1.5rem);
+  font-size: clamp(1vh, 1.25vw, 5vh);
   margin-bottom: .5rem;
 }
 

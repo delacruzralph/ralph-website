@@ -10,7 +10,7 @@
 
 .h2 {
   margin-bottom: 2rem;
-  font-size: clamp(2rem, 3vw, 3rem);
+  font-size: clamp(3vh, 3vw, 5vh);
   color: var(--gold);
 }
 
@@ -18,7 +18,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  font-size: clamp(.75rem, 1.25vw, 1.5rem);
+  font-size: clamp(1vh, 1.25vw, 5vh);
   line-height: 1.5;
   height: calc(100vh - 16rem);
   align-items: center;
