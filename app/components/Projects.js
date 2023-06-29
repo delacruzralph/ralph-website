@@ -52,7 +52,7 @@ const projects = [
     features: 'The website features many UI elements with the goal of providing a sleek and satisfying experience.',
     future: 'Future updates may include a blog section, better interactions with animations, and integration with LinkedIn and GitHub for real-time updates.',
     github: 'https://github.com/delacruzralph/ralph-website',
-    website: ''
+    website: 'https://www.ralphdelacruz.com/'
   },
 ];
 
