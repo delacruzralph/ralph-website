@@ -49,11 +49,21 @@ export default function Sidebar() {
       <h1>Ralph Dela Cruz</h1>
       <nav>
         <ul>
-          <li><a href="#about" style={{ color: activeSection === 'about' ? 'var(--gold)' : 'var(--light-neutral)' }}>About me</a></li>
-          <li><a href="#projects" style={{ color: activeSection === 'projects' ? 'var(--gold)' : 'var(--light-neutral)' }}>Projects</a></li>
-          <li><a href="#skills" style={{ color: activeSection === 'skills' ? 'var(--gold)' : 'var(--light-neutral)' }}>Skills</a></li>
-          <li><a href="#resume" style={{ color: activeSection === 'resume' ? 'var(--gold)' : 'var(--light-neutral)' }}>Experience</a></li>
-          <li><a href="#contact" style={{ color: activeSection === 'contact' ? 'var(--gold)' : 'var(--light-neutral)' }}>Contact me</a></li>
+          <li><a href="#about" style={{ color: activeSection === 'about' ? 'var(--gold)' : 'var(--light-neutral)', transition: 'color 0.2s ease-in-out' }}
+            onMouseOver={(e) => e.currentTarget.style.color = activeSection === 'about' ? 'var(--gold)' : 'var(--light-purple)'}
+            onMouseOut={(e) => e.currentTarget.style.color = activeSection === 'about' ? 'var(--gold)' : 'var(--light-neutral)'}>About me</a></li>
+          <li><a href="#projects" style={{ color: activeSection === 'projects' ? 'var(--gold)' : 'var(--light-neutral)', transition: 'color 0.2s ease-in-out' }}
+            onMouseOver={(e) => e.currentTarget.style.color =  activeSection === 'projects' ? 'var(--gold)' : 'var(--light-purple)'}
+            onMouseOut={(e) => e.currentTarget.style.color = activeSection === 'projects' ? 'var(--gold)' : 'var(--light-neutral)'}>Projects</a></li>
+          <li><a href="#skills" style={{ color: activeSection === 'skills' ? 'var(--gold)' : 'var(--light-neutral)', transition: 'color 0.2s ease-in-out' }}
+            onMouseOver={(e) => e.currentTarget.style.color =  activeSection === 'skills' ? 'var(--gold)' : 'var(--light-purple)'}
+            onMouseOut={(e) => e.currentTarget.style.color = activeSection === 'skills' ? 'var(--gold)' : 'var(--light-neutral)'}>Skills</a></li>
+          <li><a href="#resume" style={{ color: activeSection === 'resume' ? 'var(--gold)' : 'var(--light-neutral)', transition: 'color 0.2s ease-in-out' }}
+            onMouseOver={(e) => e.currentTarget.style.color =  activeSection === 'resume' ? 'var(--gold)' : 'var(--light-purple)'}
+            onMouseOut={(e) => e.currentTarget.style.color = activeSection === 'resume' ? 'var(--gold)' : 'var(--light-neutral)'}>Experience</a></li>
+          <li><a href="#contact" style={{ color: activeSection === 'contact' ? 'var(--gold)' : 'var(--light-neutral)', transition: 'color 0.2ss ease-in-out' }}
+            onMouseOver={(e) => e.currentTarget.style.color = activeSection === 'contact' ? 'var(--gold)' : 'var(--light-purple)'}
+            onMouseOut={(e) => e.currentTarget.style.color = activeSection === 'contact' ? 'var(--gold)' : 'var(--light-neutral)'}>Contact me</a></li>
         </ul>
       </nav>
       <div className={styles.links}>

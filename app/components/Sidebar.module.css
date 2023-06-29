@@ -30,7 +30,10 @@
 .links {
   align-items: center;
   color: var(--light-neutral);
-  transition: color .3s ease-in-out;
+}
+
+.icon {
+  transition: color .2s ease-in-out;
 }
 
 .icon:hover {
