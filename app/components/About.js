@@ -26,7 +26,7 @@ export default function About({ id, title }) {
             <h3>Interests</h3>
             <p>
               Off the clock, I'm powerlifting, playing basketball, gaming, or building—from LEGO sets to models.
-              I'm a big One Piece fan and a tiny house enthusiast, always intrigued by maximizing minimal spaces.
+              I'm a huge One Piece fan and a tiny house enthusiast, always intrigued by maximizing minimal spaces.
             </p>
           </div>
         </div>
