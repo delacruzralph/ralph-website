@@ -12,7 +12,7 @@
 .imageSection {
   border-radius: 1rem;
   background-color: gray;
-  height:  50%;
+  height: 50%;
   width: 100%;
   position: relative;
 }
@@ -25,7 +25,8 @@
 
 .contentSectionP {
   font-size: clamp(.75rem, 1.25vw, 1.5rem);
-  color: var(--light-neutral);;
+  color: var(--light-neutral);
+  ;
   line-height: 1.25;
 }
 
@@ -54,13 +55,24 @@
   visibility: visible;
 }
 
-.projectPopup p{
+.projectPopup p {
   margin-bottom: 1rem;
 }
 
 .projectPopupImage {
   height: calc(100vh - 16rem);
   position: relative;
+}
+
+.links {
+  color: var(--dark-purple);
+  display: flex;
+  gap: 1rem;
+  transition: color .3s ease-in-out;
+}
+
+.links a:hover {
+  color: var(--bg-purple);
 }
 
 .closeButton {

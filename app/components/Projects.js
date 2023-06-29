@@ -7,6 +7,7 @@ import pomotivation from '../../public/pomotivation.png'
 import selzoo from '../../public/selzoo.png'
 import weightplate from '../../public/weight-to-plate.png'
 import portfolio from '../../public/portfolio.png'
+import { FaGithub, FaGlobe } from 'react-icons/fa';
 
 const projects = [
   {
@@ -14,9 +15,9 @@ const projects = [
     description: 'A productivity web app that combines the Pomodoro technique with motivational quotes, developed using React and deployed on GitHub Pages.',
     photo: pomotivation,
     summary: 'The application provides a timer following the Pomodoro Technique (25 minutes of focused work followed by a 5-minute break). Each work or break session is accompanied by a randomly generated inspirational quote to keep users motivated.',
-    technology: 'The application is built using React and styled with CSS.',
-    features: 'The core features include a Pomodoro timer, random quote generator, and a clean, intuitive user interface.',
-    future: 'Future enhancements may include user customization options such as changing the timer duration, adding custom quotes, and integrating with task management tools.',
+    technology: 'The application is built using ReactJS.',
+    features: 'The core features include a Pomodoro timer, random quote generator, and a clean, intuitive user interface. Users can also adjust the break and session lengths.',
+    future: 'Future enhancements may include user customization options such as adding custom quotes, and integrating with task management tools.',
     github: 'https://github.com/delacruzralph/pomodoro-quote',
     website: 'https://delacruzralph.github.io/pomodoro-quote/'
   },
@@ -25,7 +26,7 @@ const projects = [
     description: 'SEL Zoo is a mobile-first web platform providing social emotional learning tools, developed using ReactJS, MaterialUI, and Firebase API.',
     photo: selzoo,
     summary: 'The platform provides resources and tools for parents to teach SEL, with a focus on early childhood development.',
-    technology: 'The platform is built using React and styled with CSS.',
+    technology: 'The platform is built using ReactJS, styled using MaterialUI, and supported with a Firebase backend.',
     features: ' SELZoo offers a variety of SEL teaching resources, a user-friendly interface, and a focus on early childhood development.',
     future: 'Future plans include expanding the resource library, adding user accounts for personalized learning paths, and integrating with other educational platforms.',
     github: 'https://github.com/liu-caro/sel-site',
@@ -36,9 +37,9 @@ const projects = [
     description: 'A JavaScript app that visually calculates barbell weight distribution for weightlifters.',
     photo: weightplate,
     summary: 'The application takes a target weight as input and provides the combination of weight plates needed to reach that weight on a barbell.',
-    technology: 'The application is built using React and styled with CSS. The codebase is structured with MVC architecture.',
-    features: 'The application supports various weight units and plate sizes, and provides a simple, user-friendly interface.',
-    future: 'Future updates may include support for more weight units, integration with workout planning tools, and a mobile app version.',
+    technology: 'The application is built using Javascript, HTML, and CSS as well as Bootstrap. The codebase is structured with MVC architecture.',
+    features: 'The application supports various weight units and plate sizes, and provides a simple, user-friendly interface, including a visual representation of the weights. It supports kilograms and pounds and can convert between them.',
+    future: 'Future updates may include integration with workout planning tools, and a mobile app version.',
     github: 'https://github.com/delacruzralph/Weight-To-Plate-v2',
     website: 'https://delacruzralph.github.io/Weight-To-Plate-v2/'
   },
@@ -48,8 +49,8 @@ const projects = [
     photo: portfolio,
     summary: 'The website provides an overview of my work and background, with detailed sections for each project and a contact form for visitors to get in touch.',
     technology: 'The website is built using Next.js, a popular React framework, and styled with CSS.',
-    features: 'The website features an About Me section, a Projects section with detailed project cards, a Skills section, a Resume section, and a Contact Me form.',
-    future: 'Future updates may include a blog section, more detailed project pages, and integration with LinkedIn and GitHub for real-time updates.',
+    features: 'The website features many UI elements with the goal of providing a sleek and satisfying experience.',
+    future: 'Future updates may include a blog section, better interactions with animations, and integration with LinkedIn and GitHub for real-time updates.',
     github: 'https://github.com/delacruzralph/ralph-website',
     website: ''
   },
@@ -102,10 +103,9 @@ function Project({ project, active, resetProject }) {
             borderRadius: '1rem'
           }} />
       </div>
-      <div className="Links">
-        <a href={project.github} target='_blank'>Github Repository </a>
-        |
-        <a href={project.website} target='_blank'> Website</a>
+      <div className={styles.links}>
+        <a href={project.github} target='_blank'><FaGithub size="3vw"/></a>
+        <a href={project.website} target='_blank'><FaGlobe size="3vw"/></a>
       </div>
       <button onClick={resetProject} className={styles.closeButton}>Close</button>
     </div>

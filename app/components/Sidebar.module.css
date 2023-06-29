@@ -28,7 +28,17 @@
   color: var(--light-purple);
 }
 
+.links {
+  align-items: center;
+  color: var(--light-neutral);
+  transition: color .3s ease-in-out;
+}
+
+.icon:hover {
+  color: var(--light-purple);
+}
+
 .did-you-know {
   font-size: clamp(.75rem, 1vw, 1.25rem);
-  color: var(--light-neutral);;
+  color: var(--light-neutral);
 }

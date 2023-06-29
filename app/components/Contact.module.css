@@ -18,11 +18,17 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   font-size: 1.5vh;
-  line-height: 1.5;
+  line-height: 2.5;
   height: calc(100vh - 16rem);
   gap: 1rem;
   color: var(--light-neutral);
   align-items: center;
+}
+
+.iconInfo {
+  display: flex;
+  align-items: center; 
+  gap: 1rem;
 }
 
 .label {

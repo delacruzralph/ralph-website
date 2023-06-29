@@ -17,10 +17,6 @@
   width: .25rem;
 }
 
-::-webkit-scrollbar-track {
-  /* background-color: var(--dark-purple); */
-}
-
 ::-webkit-scrollbar-thumb {
   background-color: var(--light-purple);
   border-radius: 10rem;

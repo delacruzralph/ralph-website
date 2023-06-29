@@ -2,12 +2,17 @@
 
 import styles from './Sidebar.module.css';
 import { useState, useEffect } from 'react';
+import { FaGithubSquare, FaLinkedin } from 'react-icons/fa';
 
 const funFacts = [
   'my favorite color is purple because of a dance team called Quest Crew?',
-  'I once won a powerlifting competition?',
-  'I can solve a Rubik\'s cube in under a minute?',
-  // Add as many fun facts as you like...
+  'I have a cat named Princess?',
+  'the total weight of my squat, bench, and deadlift is 1115?',
+  'I have a \"twin\" brother who is 4 years older than me? (we just look very alike)',
+  'I\'ve read\/watched One Piece in its entirety over 5 times?',
+  'I was the volleyball captain for my high school team?',
+  'My favorite basketball player is Kemba Walker for no reason?',
+  'I am an above average Rock Band (the game) drummer?'
 ];
 
 export default function Sidebar() {
@@ -23,7 +28,7 @@ export default function Sidebar() {
           }
         });
       },
-      { threshold: 0.1 } // Adjust this value as needed
+      { threshold: 0.1 }
     );
 
     const sections = document.querySelectorAll('section');
@@ -51,6 +56,10 @@ export default function Sidebar() {
           <li><a href="#contact" style={{ color: activeSection === 'contact' ? 'var(--gold)' : 'var(--light-neutral)' }}>Contact me</a></li>
         </ul>
       </nav>
+      <div className={styles.links}>
+        <a href="https://github.com/delacruzralph" target="_blank" className={styles.icon}><FaGithubSquare size="3vw" /></a>
+        <a href="https://www.linkedin.com/in/ralph-dela-cruz/" target="_blank" className={styles.icon}><FaLinkedin size="3vw" /></a>
+      </div>
       <div className={styles['did-you-know']}>
         <h4 className={styles.h4}>
           Did you know...
