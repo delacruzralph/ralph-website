@@ -50,7 +50,7 @@
   text-align: left;
 }
 
-.projectPopupActive {
+.projectPopupActive { 
   opacity: 1;
   visibility: visible;
 }
